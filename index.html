@@ -253,6 +253,15 @@
                     required
                 >
             </div>
+            <div class="field">
+                <input
+                    type="email"
+                    name="email"
+                    id="email"
+                    placeholder="אימייל"
+                    maxlength="254"
+                >
+            </div>
         </div>
 
         <div class="form-row">
@@ -343,6 +352,7 @@ document.getElementById('contactForm').addEventListener('submit', function(e) {
 
     const fullName = document.getElementById('full_name').value.trim();
     const phone = document.getElementById('phone').value.trim();
+    const email = document.getElementById('email').value.trim();
     const marketingConsent = document.getElementById('marketing').checked;
     const formError = document.getElementById('formError');
 
@@ -385,7 +395,7 @@ document.getElementById('contactForm').addEventListener('submit', function(e) {
     bambyParams.append('Fname', firstName);
     bambyParams.append('Lname', lastName);
     bambyParams.append('Mobile', phone);
-    bambyParams.append('Email', '');
+    bambyParams.append('Email', email);
     bambyParams.append('MediaTitle', bambyConfig.mediaTitle);
     bambyParams.append('MailingConfirmation', marketingConsent);
     bambyParams.append('SmsConfirmation', marketingConsent);
@@ -406,7 +416,7 @@ document.getElementById('contactForm').addEventListener('submit', function(e) {
         lastName: lastName,
         fullName: fullName,
         phone: phone,
-        email: '',
+        email: email,
         marketingConsent: marketingConsent,
         website: bambyConfig.website,
         productTitle: bambyConfig.productTitle,
