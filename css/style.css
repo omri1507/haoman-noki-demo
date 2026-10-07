@@ -865,7 +865,7 @@ header {
     #contactForm .submit-btn {
       order: 1; }
     #contactForm .marketing-consent {
-      order: 2; }
+      order: 0; }
     .contact-section .checkbox {
       align-items: flex-start;
       gap: 16px; }
