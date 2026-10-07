@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+    <!-- Noki demo copy: no tracking, and the lead form only simulates sending. -->
+    <meta name="robots" content="noindex, nofollow">
+    <script>function nokiDemoSubmit(){ return Promise.resolve(); }</script>
+    <meta charset="utf-8">
+
+    <title>האומן 18</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="מחסנים לוגיסטיים מתקדמים בעורף נמל אשדוד">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Hebrew:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@100..900&family=Noto+Sans+Hebrew:wght@100..900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css?v=6">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+</head>
+
+<body class="ty">
+
+<header>
+    <div class="container" data-aos="fade-down" data-aos-duration="600">
+        <img src="img/logo.png" class="logo">
+        <a href="https://lp.haoman18.co.il">
+        <div class="cta">
+            <span>להשארת פרטים</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="32" viewBox="0 0 14 32" fill="none">
+                <path d="M11 26C10.8688 26.0016 10.7388 25.9757 10.6183 25.9241C10.4977 25.8724 10.3893 25.7961 10.3 25.7L1.3 16.7C0.9 16.3 0.9 15.68 1.3 15.28L10.3 6.3C10.7 5.9 11.32 5.9 11.72 6.3C12.12 6.7 12.12 7.32 11.72 7.72L3.42 16L11.72 24.3C12.12 24.7 12.12 25.32 11.72 25.72C11.52 25.92 11.26 26.02 11.02 26.02L11 26Z"/>
+            </svg>
+        </div>
+            </a>
+    </div>
+</header>
+
+<div class="bg">
+
+    <div class="transition"></div>
+    <div class="transition2"></div>
+</div>
+
+<div class="hero">
+    <div class="container">
+    <div class="title" data-aos="fade-up" data-aos-duration="700">
+            <h1>
+               הטופס נשלח
+                <br>
+                
+                בהצלחה
+            </h1>
+        </div>
+    </div>
+</div>
+
+<div class="contact-section" id="contact">
+    <footer>
+        <img src="img/logo.png" class="logo" alt="האומן 18">
+    </footer>
+</div>
+
+<div class="lightbox" id="lightbox">
+  <div class="lightbox-inner">
+    <button class="lightbox-close" type="button" aria-label="Close">&times;</button>
+    <img src="" alt="">
+  </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="js/main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/mickidum/acc_toolbar/acctoolbar/acctoolbar.min.js"></script>
+<script>
+// Device detection - change background video based on device
+(function() {
+    const isMobile = /Mobile|Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+    const bgvid = document.getElementById('bgvid');
+    const bgvidSource = document.getElementById('bgvid-source');
+
+    if (isMobile) {
+        bgvid.poster = 'img/mob.png';
+        bgvidSource.src = 'img/mob.mov';
+        bgvid.load();
+    }
+})();
+</script>
+<script>
+// Optional accessibility toolbar init
+window.onload = function() {
+    window.micAccessTool = new MicAccessTool({
+        link: 'http://website.com/your-accessibility-declaration.pdf',
+        contact: 'mailto:info@your-awesome-website.com',
+        buttonPosition: 'right',
+        forceLang: 'he-IL'
+    });
+}
+</script>
+<script>
+// UTM parameters auto-fill
+(function() {
+    const params = new URLSearchParams(window.location.search);
+    ['utm_source','utm_medium','utm_campaign','utm_term','utm_content'].forEach(function (key) {
+        const el = document.getElementById(key);
+        if (el && params.has(key)) {
+            el.value = params.get(key);
+        }
+    });
+})();
+</script>
+<script>
+// Form submission handler with Bamby CRM integration
+document.getElementById('contactForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    const fullName = document.getElementById('full_name').value.trim();
+    const phone = document.getElementById('phone').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const marketingConsent = document.getElementById('marketing').checked;
+    const formError = document.getElementById('formError');
+
+    // Basic validation
+    if (!fullName || (!phone && !email)) {
+        formError.textContent = 'נא למלא שם מלא וטלפון או אימייל.';
+        formError.style.display = 'block';
+        return;
+    }
+
+    // Hide error
+    formError.style.display = 'none';
+
+    // Split full name into first and last name
+    let firstName = fullName;
+    let lastName = '';
+    if (fullName.includes(' ')) {
+        const nameParts = fullName.split(/\s+/);
+        firstName = nameParts[0];
+        lastName = nameParts.slice(1).join(' ');
+    }
+
+    // Get UTM parameters
+    const utmSource = document.getElementById('utm_source').value || '';
+    const utmMedium = document.getElementById('utm_medium').value || '';
+    const utmCampaign = document.getElementById('utm_campaign').value || '';
+    const utmTerm = document.getElementById('utm_term').value || '';
+    const utmContent = document.getElementById('utm_content').value || '';
+
+    // Bamby CRM configuration
+    const bambyConfig = {
+        projectId: 'demo',              // Your ProjectID from Bamby
+        password: 'demo',        // Your Password from Bamby
+        mediaTitle: 'דף משקיעים',   // Campaign source
+        website: 'https://lp.haoman.co.il'  // Your website URL
+    };
+
+    // Prepare Bamby CRM parameters
+    const bambyParams = new URLSearchParams();
+    bambyParams.append('Fname', firstName);
+    bambyParams.append('Lname', lastName);
+    bambyParams.append('Mobile', phone);
+    bambyParams.append('Email', email);
+    bambyParams.append('MediaTitle', bambyConfig.mediaTitle);
+    bambyParams.append('MailingConfirmation', marketingConsent);
+    bambyParams.append('SmsConfirmation', marketingConsent);
+    bambyParams.append('ref', document.referrer || bambyConfig.website);
+    bambyParams.append('ProjectID', bambyConfig.projectId);
+    bambyParams.append('Password', bambyConfig.password);
+
+    // Add UTM parameters if present
+    if (utmSource) bambyParams.append('utm_source', utmSource);
+    if (utmMedium) bambyParams.append('utm_medium', utmMedium);
+    if (utmCampaign) bambyParams.append('utm_campaign', utmCampaign);
+    if (utmTerm) bambyParams.append('utm_term', utmTerm);
+    if (utmContent) bambyParams.append('utm_content', utmContent);
+
+    // Prepare Make.com webhook data
+    const makeWebhookData = {
+        firstName: firstName,
+        lastName: lastName,
+        fullName: fullName,
+        phone: phone,
+        email: email,
+        marketingConsent: marketingConsent,
+        website: bambyConfig.website,
+        productTitle: bambyConfig.productTitle,
+        mediaTitle: bambyConfig.mediaTitle,
+        utm_source: utmSource,
+        utm_medium: utmMedium,
+        utm_campaign: utmCampaign,
+        utm_term: utmTerm,
+        utm_content: utmContent,
+        timestamp: new Date().toISOString()
+    };
+
+    // Submit to both Bamby CRM and Make.com webhook in parallel
+    const bambyPromise = nokiDemoSubmit('crm', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/x-www-form-urlencoded'
+        },
+        body: bambyParams.toString(),
+        mode: 'no-cors' // Bamby doesn't return CORS headers
+    });
+
+    const makePromise = nokiDemoSubmit('webhook', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(makeWebhookData),
+        mode: 'no-cors'
+    });
+
+    // Wait for both requests to complete
+    Promise.all([bambyPromise, makePromise])
+    .then(() => {
+        // Show thank you message
+        document.getElementById('contactForm').style.display = 'none';
+        document.getElementById('thankYouMessage').style.display = 'block';
+
+        // Scroll to form
+        document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+    })
+    .catch((error) => {
+        console.error('Error:', error);
+        formError.textContent = 'אירעה תקלה בשליחת הפרטים. אנא נסה שוב.';
+        formError.style.display = 'block';
+    });
+});
+</script>
+<script>
+// Initialize AOS animations
+AOS.init({
+    duration: 700,
+    easing: 'ease-out',
+    offset: 80,
+    once: true
+});
+</script>
+
+</body>
+</html>
