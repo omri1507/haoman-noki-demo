@@ -860,6 +860,12 @@ header {
         font-size: 18px;
         padding: 14px 0;
         text-align: right; }
+    #contactForm .consent-row {
+      display: contents; }
+    #contactForm .submit-btn {
+      order: 1; }
+    #contactForm .marketing-consent {
+      order: 2; }
     .contact-section .checkbox {
       align-items: flex-start;
       gap: 16px; }
