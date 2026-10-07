@@ -863,9 +863,9 @@ header {
     #contactForm .consent-row {
       display: contents; }
     #contactForm .submit-btn {
-      order: 1; }
+      order: 2; }
     #contactForm .marketing-consent {
-      order: 0; }
+      order: 1; }
     .contact-section .checkbox {
       align-items: flex-start;
       gap: 16px; }
