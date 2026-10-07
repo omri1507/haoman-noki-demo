@@ -309,12 +309,15 @@ h1, h2, h3, h4, h5, h6 {
     border-width: 0.0714285714rem;
     padding: 2.1428571429rem;
     display: flex;
-    flex-direction: row-reverse;
+    flex-direction: column-reverse;
+    text-align: center;
     gap: 1.4285714286rem;
     align-items: center;
     justify-content: center;
     flex-shrink: 0;
-    height: 14rem;
+    height: auto;
+    min-height: 14rem;
+    align-self: stretch;
     flex: 1;
     position: relative;
     overflow: hidden;
