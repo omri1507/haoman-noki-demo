@@ -206,9 +206,9 @@
             <h3>Prime Location</h3>
             <p>
                 <strong>
-                    פרוייקט האומן 18 ממוקם צמוד לנמל אשדוד ובסמיכות מקסימלית לצירי תנועה
+                    פרויקט האומן 18 ממוקם צמוד לנמל אשדוד ובסמיכות מקסימלית לצירי תנועה
                     המרכזיים במרכז הארץ:
-                </strong>כביש 6, כביש 4, כביש 7, כביש 5, ומאפשר שינוע מהיר וחסכוני יותר של הסחורות לכל חלקי הארץ. המרכז הלוגיסטי נמצא באזור בעל ביקושי שיא ופיתוח מואץ מאוד עם כבישי גישה נוחים ומרווחים למתחם.
+                </strong>כביש 6, כביש 4, כביש 7, כביש 5, ומאפשר שינוע מהיר וחסכוני יותר של הסחורות לכל חלקי הארץ. המרכז הלוגיסטי נמצא באזור בעל ביקושי שיא ופיתוח מואץ עם כבישי גישה נוחים ומרווחים למתחם.
             </p>
         </div>
         <div class="map" data-aos="fade-up" data-aos-duration="700" data-aos-delay="150"></div>
@@ -224,7 +224,7 @@
 
 <div class="contact-section" id="contact">
     <form class="form-container" id="contactForm" accept-charset="utf-8">
-        <h3>לפרטים נוספים<br><strong>ותיאום פגישה:</strong></h3>
+        <h3>לפרטים נוספים <strong>ותיאום פגישה:</strong></h3>
 
         <div class="form-error" id="formError" style="display: none;"></div>
         <div class="thank-you-message" id="thankYouMessage" style="display: none;">
@@ -253,16 +253,6 @@
                     required
                 >
             </div>
-            <div class="field">
-                <input
-                    type="email"
-                    name="email"
-                    id="email"
-                    placeholder="אימייל"
-                    maxlength="254"
-                    required
-                >
-            </div>
         </div>
 
         <div class="form-row">
@@ -281,7 +271,7 @@
                 </span>
             </label>
 
-            <label class="checkbox contact-consent">
+            <label class="checkbox">
                 <span class="checkbox-label">
                     מילוי פרטיך ולחיצה על כפתור ״שלחו״ מהווה הסכמה לנציג מכירות<br>
                     מטעם חברת האומן 18 ליצור איתך קשר באמצעות טלפון / SMS / WhatsApp
@@ -353,7 +343,6 @@ document.getElementById('contactForm').addEventListener('submit', function(e) {
 
     const fullName = document.getElementById('full_name').value.trim();
     const phone = document.getElementById('phone').value.trim();
-    const email = document.getElementById('email').value.trim();
     const marketingConsent = document.getElementById('marketing').checked;
     const formError = document.getElementById('formError');
 
@@ -396,7 +385,7 @@ document.getElementById('contactForm').addEventListener('submit', function(e) {
     bambyParams.append('Fname', firstName);
     bambyParams.append('Lname', lastName);
     bambyParams.append('Mobile', phone);
-    bambyParams.append('Email', email);
+    bambyParams.append('Email', '');
     bambyParams.append('MediaTitle', bambyConfig.mediaTitle);
     bambyParams.append('MailingConfirmation', marketingConsent);
     bambyParams.append('SmsConfirmation', marketingConsent);
@@ -417,7 +406,7 @@ document.getElementById('contactForm').addEventListener('submit', function(e) {
         lastName: lastName,
         fullName: fullName,
         phone: phone,
-        email: email,
+        email: '',
         marketingConsent: marketingConsent,
         website: bambyConfig.website,
         productTitle: bambyConfig.productTitle,

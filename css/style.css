@@ -292,7 +292,7 @@ h1, h2, h3, h4, h5, h6 {
 .features-section {
   display: grid;
   justify-content: center;
-  align-items: stretch;
+  align-items: center;
   align-content: center;
   gap: 4.2857142857rem 4.2857142857rem;
   align-self: stretch;
@@ -309,13 +309,12 @@ h1, h2, h3, h4, h5, h6 {
     border-width: 0.0714285714rem;
     padding: 2.1428571429rem;
     display: flex;
-    flex-direction: column-reverse;
+    flex-direction: row-reverse;
     gap: 1.4285714286rem;
     align-items: center;
     justify-content: center;
     flex-shrink: 0;
-    height: auto;
-    min-height: 14rem;
+    height: 14rem;
     flex: 1;
     position: relative;
     overflow: hidden;
@@ -339,8 +338,7 @@ h1, h2, h3, h4, h5, h6 {
     .features-section .feature p {
       font-size: 1.8571428571rem;
       font-style: normal;
-      line-height: 130%;
-      text-align: center; }
+      line-height: 130%; }
       .features-section .feature p strong {
         font-weight: 700; }
         .features-section .feature p strong.mob {
@@ -468,8 +466,6 @@ h1, h2, h3, h4, h5, h6 {
         opacity: 1; }
       .contact-section .field input:not(.check-input):focus {
         outline: none; }
-  .contact-section .contact-consent {
-    order: -1; }
   .contact-section .checkbox {
     display: inline-flex;
     align-items: center;
