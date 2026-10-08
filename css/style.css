@@ -468,6 +468,8 @@ h1, h2, h3, h4, h5, h6 {
         opacity: 1; }
       .contact-section .field input:not(.check-input):focus {
         outline: none; }
+  .contact-section .contact-consent {
+    order: -1; }
   .contact-section .checkbox {
     display: inline-flex;
     align-items: center;
