@@ -27,12 +27,12 @@
 <header>
     <div class="container" data-aos="fade-down" data-aos-duration="600">
         <img src="img/logo.png" class="logo">
-        <button type="button" class="cta contact-cta">
+        <div class="cta">
             <span>להשארת פרטים</span>
-            <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="14" height="32" viewBox="0 0 14 32" fill="none">
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="32" viewBox="0 0 14 32" fill="none">
                 <path d="M11 26C10.8688 26.0016 10.7388 25.9757 10.6183 25.9241C10.4977 25.8724 10.3893 25.7961 10.3 25.7L1.3 16.7C0.9 16.3 0.9 15.68 1.3 15.28L10.3 6.3C10.7 5.9 11.32 5.9 11.72 6.3C12.12 6.7 12.12 7.32 11.72 7.72L3.42 16L11.72 24.3C12.12 24.7 12.12 25.32 11.72 25.72C11.52 25.92 11.26 26.02 11.02 26.02L11 26Z"/>
             </svg>
-        </button>
+        </div>
     </div>
 </header>
 
@@ -55,7 +55,7 @@
 <div class="hero">
     <div class="container">
     <div class="title" data-aos="fade-up" data-aos-duration="700">
-            <p>שינינו דברים <strong>באמצעות Noki</strong>!</p>
+            <p>מהפכת הלוגיסטיקה <strong>כבר כאן!</strong></p>
             <h1>
                 מחסנים לוגיסטיים<br>מתקדמים למכירה
                 <br><strong>בעורף נמל אשדוד</strong>
@@ -182,10 +182,7 @@
 
     <div class="feature" data-aos="fade-up" data-aos-duration="650" data-aos-delay="600">
         <div class="additional-feature-text">
-            <p>
-                <strong class="mob desk">ערבויות חוק מכר</strong><br>
-                <span>לביטחון ולשקט נפשי לאורך הדרך</span>
-            </p>
+            <p><strong class="mob desk">ערבויות חוק מכר</strong></p>
         </div>
         <img src="img/icons/Vector.svg" alt="">
     </div>
@@ -206,7 +203,7 @@
 
     <div class="location-section">
         <div class="text" data-aos="fade-up" data-aos-duration="700">
-            <h3>מיקום מעולה</h3>
+            <h3>Prime Location</h3>
             <p>
                 <strong>
                     פרויקט האומן 18 ממוקם צמוד לנמל אשדוד ובסמיכות מקסימלית לצירי תנועה
@@ -227,7 +224,7 @@
 
 <div class="contact-section" id="contact">
     <form class="form-container" id="contactForm" accept-charset="utf-8">
-        <h3>לפרטים נוספים<br><strong>ותיאום פגישה:</strong></h3>
+        <h3>לפרטים נוספים <strong>ותיאום פגישה:</strong></h3>
 
         <div class="form-error" id="formError" style="display: none;"></div>
         <div class="thank-you-message" id="thankYouMessage" style="display: none;">
@@ -256,19 +253,10 @@
                     required
                 >
             </div>
-            <div class="field">
-                <input
-                    type="email"
-                    name="email"
-                    id="email"
-                    placeholder="אימייל"
-                    maxlength="254"
-                >
-            </div>
         </div>
 
-        <div class="form-row consent-row">
-            <label class="checkbox marketing-consent">
+        <div class="form-row">
+            <label class="checkbox">
                 <input
                     type="checkbox"
                     name="marketing"
@@ -298,7 +286,7 @@
         <input type="hidden" name="utm_term" id="utm_term" value="">
         <input type="hidden" name="utm_content" id="utm_content" value="">
 
-        <button type="submit" class="submit-btn">שלח</button>
+        <button type="submit" class="submit-btn">שליחה</button>
     </form>
 
     <footer>
@@ -355,7 +343,6 @@ document.getElementById('contactForm').addEventListener('submit', function(e) {
 
     const fullName = document.getElementById('full_name').value.trim();
     const phone = document.getElementById('phone').value.trim();
-    const email = document.getElementById('email').value.trim();
     const marketingConsent = document.getElementById('marketing').checked;
     const formError = document.getElementById('formError');
 
@@ -398,7 +385,7 @@ document.getElementById('contactForm').addEventListener('submit', function(e) {
     bambyParams.append('Fname', firstName);
     bambyParams.append('Lname', lastName);
     bambyParams.append('Mobile', phone);
-    bambyParams.append('Email', email);
+    bambyParams.append('Email', '');
     bambyParams.append('MediaTitle', bambyConfig.mediaTitle);
     bambyParams.append('MailingConfirmation', marketingConsent);
     bambyParams.append('SmsConfirmation', marketingConsent);
@@ -419,7 +406,7 @@ document.getElementById('contactForm').addEventListener('submit', function(e) {
         lastName: lastName,
         fullName: fullName,
         phone: phone,
-        email: email,
+        email: '',
         marketingConsent: marketingConsent,
         website: bambyConfig.website,
         productTitle: bambyConfig.productTitle,

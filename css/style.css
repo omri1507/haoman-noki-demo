@@ -309,15 +309,12 @@ h1, h2, h3, h4, h5, h6 {
     border-width: 0.0714285714rem;
     padding: 2.1428571429rem;
     display: flex;
-    flex-direction: column-reverse;
-    text-align: center;
+    flex-direction: row-reverse;
     gap: 1.4285714286rem;
     align-items: center;
     justify-content: center;
     flex-shrink: 0;
-    height: auto;
-    min-height: 14rem;
-    align-self: stretch;
+    height: 14rem;
     flex: 1;
     position: relative;
     overflow: hidden;
@@ -574,13 +571,6 @@ header {
     border: 0.1428571429rem solid #fff;
     background: #A93242;
     transition: all 0.4s ease; }
-    header .contact-cta {
-      font: inherit;
-      color: inherit; }
-    header .contact-cta:focus-visible {
-      outline: 0.3rem solid #fff;
-      outline-offset: 0.4rem;
-      box-shadow: 0 0 0 0.7rem #111; }
     header .cta span {
       font-size: 1.8571428571rem;
       font-weight: 700;
@@ -867,12 +857,6 @@ header {
         font-size: 18px;
         padding: 14px 0;
         text-align: right; }
-    #contactForm .consent-row {
-      display: contents; }
-    #contactForm .submit-btn {
-      order: 2; }
-    #contactForm .marketing-consent {
-      order: 1; }
     .contact-section .checkbox {
       align-items: flex-start;
       gap: 16px; }
