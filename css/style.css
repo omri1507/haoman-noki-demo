@@ -292,7 +292,7 @@ h1, h2, h3, h4, h5, h6 {
 .features-section {
   display: grid;
   justify-content: center;
-  align-items: center;
+  align-items: stretch;
   align-content: center;
   gap: 4.2857142857rem 4.2857142857rem;
   align-self: stretch;
@@ -309,12 +309,13 @@ h1, h2, h3, h4, h5, h6 {
     border-width: 0.0714285714rem;
     padding: 2.1428571429rem;
     display: flex;
-    flex-direction: row-reverse;
+    flex-direction: column-reverse;
     gap: 1.4285714286rem;
     align-items: center;
     justify-content: center;
     flex-shrink: 0;
-    height: 14rem;
+    height: auto;
+    min-height: 14rem;
     flex: 1;
     position: relative;
     overflow: hidden;
