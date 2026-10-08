@@ -339,7 +339,8 @@ h1, h2, h3, h4, h5, h6 {
     .features-section .feature p {
       font-size: 1.8571428571rem;
       font-style: normal;
-      line-height: 130%; }
+      line-height: 130%;
+      text-align: center; }
       .features-section .feature p strong {
         font-weight: 700; }
         .features-section .feature p strong.mob {
