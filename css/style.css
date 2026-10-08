@@ -120,8 +120,8 @@ h1, h2, h3, h4, h5, h6 {
     width: 100%;
     height: 100%; }
   .hero .stamp {
-    width: 20rem;
-    height: 20rem;
+    width: 16rem;
+    height: 16rem;
     top: 19.5rem;
     right: 50rem;
     position: absolute; }
@@ -721,8 +721,8 @@ header {
       position: absolute;
       top: 0px;
       left: 10px;
-      width: 135px;
-      height: 135px;
+      width: 110px;
+      height: 110px;
       z-index: 2;
       right: auto; }
 
